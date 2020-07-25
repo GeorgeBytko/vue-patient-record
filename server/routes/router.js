@@ -7,7 +7,6 @@ router
         try {
             const patients = await Patient.find().sort({recording_date: -1}).lean()
             await res
-                .status(200)
                 .json({
                     patients
                 })
@@ -30,7 +29,6 @@ router
             })
             await patient.save()
             await res
-                .status(200)
                 .json({
                     message: 'Patient created',
                     patient
@@ -44,7 +42,7 @@ router
         if (!req.params.id) return res.status(400)
         try {
             await Patient.deleteOne({_id: req.params.id})
-            res.sendStatus(201)
+            res.sendStatus(204)
         }
         catch (e) {
             await res.sendStatus(500)
