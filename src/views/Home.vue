@@ -1,18 +1,16 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <FormPatient />
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
-export default {
-  name: 'Home',
-  components: {
-    HelloWorld
-  }
-}
+    import FormPatient from "../components/FormPatient";
+    export default {
+        metaInfo: {
+            title: 'Запись пациента'
+        },
+        name: 'Home',
+        components: {
+            FormPatient
+        }
+    }
 </script>
