@@ -8,7 +8,6 @@ const app = express()
 
 app.use(express.urlencoded({extended: true}))
 app.use(express.json())
-console.log(path.join(__dirname, '../dist'))
 app.use( express.static(path.join(__dirname, '../dist')))
 app.use(router)
 app.use(history())
