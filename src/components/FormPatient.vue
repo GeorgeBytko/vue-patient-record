@@ -155,12 +155,10 @@
                         age: this.form.age.val
                     })
                         .then(response => {
-                            console.log(response)
                             this.clearForm()
                             this.showMessage(false,'Вы добавлены в базу!')
                         })
                         .catch(err => {
-                            console.log(err)
                             this.showMessage(true,'Что-то пошло не так')
                         })
                         .finally(() => this.submitBlocked = false)

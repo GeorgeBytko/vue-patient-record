@@ -43,7 +43,6 @@
             deletePatient(_id) {
                 axios.delete('/api/patients/' + _id)
                     .then(response => {
-                        console.log(response)
                         this.patients = this.patients.filter( item => item._id !== _id)
                     })
                     .catch(err => console.log(err))
