@@ -16,7 +16,7 @@ router
         }
     })
     .post('/api/patients', async (req, res) => {
-        if (!req.body) return await res.sendStatus(400)
+        if (!req.body) return res.sendStatus(400)
         try {
             const patient = new Patient({
                 name: req.body.name,
@@ -39,7 +39,7 @@ router
         }
     })
     .delete('/api/patients/:id', async (req,res) => {
-        if (!req.params.id) return res.status(400)
+        if (!req.params.id) return res.sendStatus(400)
         try {
             await Patient.deleteOne({_id: req.params.id})
             res.sendStatus(204)
