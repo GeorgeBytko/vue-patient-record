@@ -1,5 +1,8 @@
 # vue-patient-record
 
+### Working app
+Приложение размещено на [heroku](https://vue-patient-record.herokuapp.com).
+
 ## Project setup
 ```
 npm install
